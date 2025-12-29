@@ -25,7 +25,10 @@ This repository contains examples demonstrating the use of DSPy for building age
 2.  **Install Python dependencies:**
     It's recommended to use a virtual environment.
     ```bash
-    pip install dspy-ai requests duckduckgo-search
+    # Create and activate a virtual environment
+    uv venv
+    source .venv/bin/activate
+    uv pip install dspy-ai requests duckduckgo-search
     ```
     *(Note: `duckduckgo-search` is used by `ddgs` in the scripts. If it's not available or causes issues, the scripts have fallback mechanisms.)*
 
