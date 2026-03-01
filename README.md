@@ -5,7 +5,14 @@ This repository provides two main example bundles:
 ## Bundles
 
 - `dspy_examples/` holds the agents that assemble DSPy modules with tools such as web search and Python evaluation.
-- `visualization_examples/` contains the runnable DSPy demonstrations (QA, RAG, classification, optimization) and the helper scripts that visualize their prompt-to-response mappings.
+- `visualization_examples/` contains the runnable DSPy demonstrations (QA, RAG, classification, optimization) and the helper scripts that visualize their prompt-to-response mappings as below.
+
+<div align="center">
+  <img src="./MIPRO%20Map.png" alt="prompt-to-response for MIPRO" title="" style="max-width: 900px; width: 100%;"/>
+  <div style="margin-top:6px; font-size: 1em;">
+    Baseline instruction is replaced with optimized instruction using MIPRO
+  </div>
+</div>
 
 ## File overview
 
