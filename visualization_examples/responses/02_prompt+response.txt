@@ -1,0 +1,24 @@
+[34m[2026-03-01T11:01:31.475585][0m
+[31mSystem message:[0m
+Your input fields are:
+1. `question` (str):
+Your output fields are:
+1. `reasoning` (str): 
+2. `answer` (str): the final numerical answer
+All interactions will be structured in the following way, with the appropriate values filled in.
+Inputs will have the following structure:
+[[ ## question ## ]]
+{question}
+Outputs will be a JSON object with the following fields.
+{
+  "reasoning": "{reasoning}",
+  "answer": "{answer}"
+}
+In adhering to this structure, your objective is: 
+        Solve simple math word problems.
+[31mUser message:[0m
+[[ ## question ## ]]
+If I have 3 apples and buy 2 more, then eat 1, how many do I have?
+Respond with a JSON object in the following order of fields: `reasoning`, then `answer`.
+[31mResponse:[0m
+[32m{"reasoning": "The problem states you start with 3 apples and add 2 more, then eat 1.  So, initially you have 3 + 2 = 5 apples. After eating 1, you have 5 - 1 = 4 apples.", "answer": "4"}[0m

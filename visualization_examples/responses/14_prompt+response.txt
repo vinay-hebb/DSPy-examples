@@ -1,0 +1,50 @@
+[34m[2026-03-01T11:03:10.332254][0m
+[31mSystem message:[0m
+Your input fields are:
+1. `question` (str):
+Your output fields are:
+1. `answer` (str): a short factoid answer, often 1 to 5 words
+All interactions will be structured in the following way, with the appropriate values filled in.
+[[ ## question ## ]]
+{question}
+[[ ## answer ## ]]
+{answer}
+[[ ## completed ## ]]
+In adhering to this structure, your objective is: 
+        Answer questions with short factoid answers.
+[31mUser message:[0m
+[[ ## question ## ]]
+What is the capital of France?
+[31mAssistant message:[0m
+[[ ## answer ## ]]
+Paris
+[[ ## completed ## ]]
+[31mUser message:[0m
+[[ ## question ## ]]
+What is the capital of Germany?
+[31mAssistant message:[0m
+[[ ## answer ## ]]
+Berlin
+[[ ## completed ## ]]
+[31mUser message:[0m
+[[ ## question ## ]]
+What is the capital of Brazil?
+[31mAssistant message:[0m
+[[ ## answer ## ]]
+Brasilia
+[[ ## completed ## ]]
+[31mUser message:[0m
+[[ ## question ## ]]
+What is the capital of Italy?
+[31mAssistant message:[0m
+[[ ## answer ## ]]
+Rome
+[[ ## completed ## ]]
+[31mUser message:[0m
+[[ ## question ## ]]
+What is the capital of Australia?
+Respond with the corresponding output fields, starting with the field `[[ ## answer ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+[31mResponse:[0m
+[32m[[ ## answer ## ]]
+Canberra
+[[ ## completed ## ]][0m

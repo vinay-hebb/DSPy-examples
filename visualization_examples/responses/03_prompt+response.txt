@@ -1,0 +1,22 @@
+[34m[2026-03-01T11:01:44.300071][0m
+[31mSystem message:[0m
+Your input fields are:
+1. `submission` (str):
+Your output fields are:
+1. `intent` (str): one of: [Bug Report, Feature Request, Question, Other]
+All interactions will be structured in the following way, with the appropriate values filled in.
+[[ ## submission ## ]]
+{submission}
+[[ ## intent ## ]]
+{intent}
+[[ ## completed ## ]]
+In adhering to this structure, your objective is: 
+        Classify the user's intent into one of the allowed categories.
+[31mUser message:[0m
+[[ ## submission ## ]]
+I think the login button color is too bright, can we change it?
+Respond with the corresponding output fields, starting with the field `[[ ## intent ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+[31mResponse:[0m
+[32m[[ ## intent ## ]]
+Feature Request
+[[ ## completed ## ]][0m

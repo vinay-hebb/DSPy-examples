@@ -1,13 +1,45 @@
 # DSPy Examples
 
-This repository contains examples demonstrating the use of DSPy for building agents that utilize various tools, including web search and a Python interpreter for math evaluations.
+This repository provides two main example bundles:
 
-## Files
+## Bundles
 
--   `multi_tool.py`: This script showcases a DSPy ReAct agent capable of using multiple tools. It includes a `search_web_agent` for web searches and an `evaluate_math` function for Python-based mathematical expression evaluation. It also demonstrates how to integrate custom logging for agent steps.
--   `web_search_agent.py`: This script focuses on a web search functionality using different methods, primarily `ddgs` (DuckDuckGo Search) with fallbacks to SearXNG or basic HTML scraping. It then uses the retrieved context in a DSPy `ChainOfThought` module to answer a question.
+- `dspy_examples/` holds the agents that assemble DSPy modules with tools such as web search and Python evaluation.
+- `visualization_examples/` contains the runnable DSPy demonstrations (QA, RAG, classification, optimization) and the helper scripts that visualize their prompt-to-response mappings.
+
+## File overview
+
+- `dspy_examples/multi_tool.py`: A DSPy ReAct-style agent that mixes a search tool with a Python math evaluator and logs each agent step.
+- `dspy_examples/web_search_agent.py`: Uses the `ddgs` search wrapper (with fallbacks to other web scrapers) and feeds the collected context into a Chain of Thought predictor to answer user questions.
+- `visualization_examples/run_all.sh`: Runs every visualization example in order and then invokes `visualizer.py` for each mapping file to emit HTML viewers under `responses/`.
+- `visualization_examples/visualizer.py`: Reads a Markdown mapping file and renders an interactive HTML visualization of how code snippets align with response text.
+- `visualization_examples/watch_mappings.py`: Monitors mapping files for changes (used primarily in development workflows).
+- The remaining DSPy sample scripts now live under `visualization_examples/` and correspond to the numbered tutorials (01…15).
 
 ## Setup
+
+### Prerequisites
+
+-   Python 3.x
+-   A compatible model served by Ollama (default: `gemma3:1b`)
+
+### Installation
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/vinay-hebb/DSPy-examples.git
+    cd DSPy-examples
+    ```
+
+2.  **Install Python dependencies** (prefer using a virtual environment):
+    ```bash
+    uv venv
+    source .venv/bin/activate
+    uv pip install dspy-ai requests duckduckgo-search
+    ```
+    > `duckduckgo-search` powers `ddgs`; if it causes issues, the scripts already include fallbacks.
+
+## Usage
 
 ### Prerequisites
 
@@ -34,18 +66,19 @@ This repository contains examples demonstrating the use of DSPy for building age
 
 ## Usage
 
-### Running `multi_tool.py`
-
-This script demonstrates a ReAct agent answering a question that requires both web search and mathematical evaluation.
+### Running the agent bundle
 
 ```bash
+cd dspy_examples
 python multi_tool.py
-```
-
-### Running `web_search_agent.py`
-
-This script demonstrates using web search to gather context and then employing a Chain of Thought model to answer a question.
-
-```bash
 python web_search_agent.py
 ```
+
+### Running the visualization bundle
+
+```bash
+cd visualization_examples
+bash run_all.sh
+```
+
+Each run writes its prompt/response output under `responses/` and produces mapping visualizations (HTML files) alongside the Markdown traces. Open any `responses/*_mapping_viewer.html` in a browser to inspect the alignments between code and outputs.

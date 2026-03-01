@@ -1,0 +1,39 @@
+[34m[2026-03-01T11:02:16.108949][0m
+[31mSystem message:[0m
+Your input fields are:
+1. `biography` (str):
+Your output fields are:
+1. `full_name` (str): 
+2. `age` (str): numeric estimate if not explicit
+3. `occupation` (str): 
+4. `known_for` (str): short summary of achievements
+All interactions will be structured in the following way, with the appropriate values filled in.
+[[ ## biography ## ]]
+{biography}
+[[ ## full_name ## ]]
+{full_name}
+[[ ## age ## ]]
+{age}
+[[ ## occupation ## ]]
+{occupation}
+[[ ## known_for ## ]]
+{known_for}
+[[ ## completed ## ]]
+In adhering to this structure, your objective is: 
+        Extract structured information from a biography.
+[31mUser message:[0m
+[[ ## biography ## ]]
+    Born in 1879, Albert Einstein was a theoretical physicist who developed the theory of relativity. 
+    He is considered one of the most influential scientists of all time.
+Respond with the corresponding output fields, starting with the field `[[ ## full_name ## ]]`, then `[[ ## age ## ]]`, then `[[ ## occupation ## ]]`, then `[[ ## known_for ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+[31mResponse:[0m
+[32m[[ ## full_name ## ]]
+Albert Einstein
+[[ ## age ## ]]
+1879
+[[ ## occupation ## ]]
+Theoretical physicist
+[[ ## known_for ## ]]
+Theory of relativity
+[[ ## completed ## ]]
+Not specified[0m

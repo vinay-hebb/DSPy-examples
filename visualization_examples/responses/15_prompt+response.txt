@@ -1,0 +1,64 @@
+[34m[2026-03-01T11:47:30.637353][0m
+[31mSystem message:[0m
+Your input fields are:
+1. `text` (str): the text to analyze
+Your output fields are:
+1. `reasoning` (str): 
+2. `sentiment` (str): sentiment label: positive, negative, or neutral
+3. `confidence` (str): confidence level from 0 to 1
+4. `explanation` (str): brief explanation of the sentiment
+All interactions will be structured in the following way, with the appropriate values filled in.
+[[ ## text ## ]]
+{text}
+[[ ## reasoning ## ]]
+{reasoning}
+[[ ## sentiment ## ]]
+{sentiment}
+[[ ## confidence ## ]]
+{confidence}
+[[ ## explanation ## ]]
+{explanation}
+[[ ## completed ## ]]
+In adhering to this structure, your objective is: 
+        Analyze the text and determine the sentiment and confidence level. Respond with the sentiment and confidence level.
+[31mUser message:[0m
+[[ ## text ## ]]
+This movie was terrible. I wasted 2 hours of my life.
+[31mAssistant message:[0m
+[[ ## reasoning ## ]]
+The text expresses strong negative sentiment due to the statement of wasting time on a terrible movie.
+[[ ## sentiment ## ]]
+negative
+[[ ## confidence ## ]]
+0.6
+[[ ## explanation ## ]]
+The text expresses disappointment and frustration, clearly indicating a negative experience.
+[[ ## completed ## ]]
+[31mUser message:[0m
+[[ ## text ## ]]
+I absolutely love this product! It works perfectly and exceeded my expectations.
+[31mAssistant message:[0m
+[[ ## reasoning ## ]]
+The text expresses strong positive sentiment due to enthusiastic praise and positive expectations.
+[[ ## sentiment ## ]]
+positive
+[[ ## confidence ## ]]
+1.0
+[[ ## explanation ## ]]
+The text conveys a feeling of delight and satisfaction.
+[[ ## completed ## ]]
+[31mUser message:[0m
+[[ ## text ## ]]
+It's raining outside today.
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## sentiment ## ]]`, then `[[ ## confidence ## ]]`, then `[[ ## explanation ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+[31mResponse:[0m
+[32m[[ ## reasoning ## ]]
+The text is a simple statement of an obvious fact – it is raining.
+[[ ## sentiment ## ]]
+neutral
+[[ ## confidence ## ]]
+0.9
+[[ ## explanation ## ]]
+The text presents a factual observation with no emotional coloring.
+[[ ## completed ## ]]
+[[ ## ]][0m

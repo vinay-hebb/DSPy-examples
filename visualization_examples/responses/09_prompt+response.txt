@@ -1,0 +1,30 @@
+[34m[2026-03-01T11:02:51.860406][0m
+[31mSystem message:[0m
+Your input fields are:
+1. `text` (str):
+Your output fields are:
+1. `title` (str): the movie title
+2. `year` (int): the release year as an integer
+3. `genre` (str): the primary genre
+4. `director` (str): the director name
+5. `cast` (list[str]): list of main actors
+All interactions will be structured in the following way, with the appropriate values filled in.
+Inputs will have the following structure:
+[[ ## text ## ]]
+{text}
+Outputs will be a JSON object with the following fields.
+{
+  "title": "{title}",
+  "year": "{year}        # note: the value you produce must be a single int value",
+  "genre": "{genre}",
+  "director": "{director}",
+  "cast": "{cast}        # note: the value you produce must adhere to the JSON schema: {\"type\": \"array\", \"items\": {\"type\": \"string\"}}"
+}
+In adhering to this structure, your objective is: 
+        Extract structured movie information from the given text.
+[31mUser message:[0m
+[[ ## text ## ]]
+Released in 1994, The Shawshank Redemption is a drama film directed by Frank Darabont. It stars Tim Robbins and Morgan Freeman.
+Respond with a JSON object in the following order of fields: `title`, then `year` (must be formatted as a valid Python int), then `genre`, then `director`, then `cast` (must be formatted as a valid Python list[str]).
+[31mResponse:[0m
+[32m{"title": "The Shawshank Redemption", "year": 1994, "genre": "drama", "director": "Frank Darabont", "cast": ["Tim Robbins", "Morgan Freeman"]}[0m

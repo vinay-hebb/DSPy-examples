@@ -1,0 +1,43 @@
+[34m[2026-03-01T11:02:27.101953][0m
+[31mSystem message:[0m
+Your input fields are:
+1. `text` (str):
+Your output fields are:
+1. `sentiment` (str): one of: positive, negative, neutral
+All interactions will be structured in the following way, with the appropriate values filled in.
+[[ ## text ## ]]
+{text}
+[[ ## sentiment ## ]]
+{sentiment}
+[[ ## completed ## ]]
+In adhering to this structure, your objective is: 
+        Classify the sentiment of the given text.
+[31mUser message:[0m
+[[ ## text ## ]]
+I absolutely loved this movie, it was fantastic!
+[31mAssistant message:[0m
+[[ ## sentiment ## ]]
+positive
+[[ ## completed ## ]]
+[31mUser message:[0m
+[[ ## text ## ]]
+The food was terrible and the service was slow.
+[31mAssistant message:[0m
+[[ ## sentiment ## ]]
+negative
+[[ ## completed ## ]]
+[31mUser message:[0m
+[[ ## text ## ]]
+The meeting is scheduled for 3pm tomorrow.
+[31mAssistant message:[0m
+[[ ## sentiment ## ]]
+neutral
+[[ ## completed ## ]]
+[31mUser message:[0m
+[[ ## text ## ]]
+This product works okay but nothing special about it.
+Respond with the corresponding output fields, starting with the field `[[ ## sentiment ## ]]`, and then ending with the marker for `[[ ## completed ## ]]`.
+[31mResponse:[0m
+[32m[[ ## sentiment ## ]]
+neutral
+[[ ## completed ## ]][0m
