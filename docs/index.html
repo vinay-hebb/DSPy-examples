@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DSPy Visualizers</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #0f172a;
+        --panel: #1e293b;
+        --text: #f8fafc;
+        --accent: #38bdf8;
+        --border: #334155;
+        --muted: #94a3b8;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: var(--bg);
+        font-family: "Inter", system-ui, sans-serif;
+        color: var(--text);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 1rem 3rem;
+      }
+      .card {
+        width: min(56rem, 100%);
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 2rem;
+        box-shadow: 0 30px 60px rgba(15, 23, 42, 0.45);
+      }
+      h1 {
+        margin: 0;
+        font-size: 2rem;
+        color: var(--accent);
+      }
+      .meta {
+        margin: 0.5rem 0 1.5rem;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 0.85rem;
+      }
+      .tile {
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+        padding: 1rem 1.1rem;
+        background: rgba(15, 23, 42, 0.6);
+        border-radius: 16px;
+        border: 1px solid rgba(56, 189, 248, 0.25);
+        text-decoration: none;
+        transition: transform 0.15s ease, border-color 0.15s ease;
+      }
+      .tile:hover {
+        transform: translateY(-2px);
+        border-color: rgba(56, 189, 248, 0.5);
+      }
+      .tile-title {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--text);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>DSPy Visualizers</h1>
+      <p class="meta">
+        Browse the code-to-prompt/response visualizers
+      </p>
+      <div class="grid">
+        <a class="tile" href="responses/01_mapping_viewer.html">
+          <span class="tile-title">01_basic_qa.py</span>
+        </a>
+        <a class="tile" href="responses/02_mapping_viewer.html">
+          <span class="tile-title">02_chain_of_thought.py</span>
+        </a>
+        <a class="tile" href="responses/03_mapping_viewer.html">
+          <span class="tile-title">03_classification.py</span>
+        </a>
+        <a class="tile" href="responses/04_mapping_viewer.html">
+          <span class="tile-title">04_simple_rag.py</span>
+        </a>
+        <a class="tile" href="responses/05_mapping_viewer.html">
+          <span class="tile-title">05_structured_output.py</span>
+        </a>
+        <a class="tile" href="responses/08_mapping_viewer.html">
+          <span class="tile-title">08_few_shot_examples.py</span>
+        </a>
+        <a class="tile" href="responses/09_mapping_viewer.html">
+          <span class="tile-title">09_typed_predictors.py</span>
+        </a>
+        <a class="tile" href="responses/14_mapping_viewer.html">
+          <span class="tile-title">14_optimizer.py</span>
+        </a>
+        <a class="tile" href="responses/15_mapping_viewer.html">
+          <span class="tile-title">15_mipro_optimizer.py</span>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
